@@ -1,16 +1,13 @@
-/* This file will handle all the collection related stuff */
-let client = require("../database_connection");
+let client = require('../dbConnection');
+
 let collection = client.db().collection('Cats');
 
-function insertCat(cat, callback) {
-    collection.insertOne(cat, callback);
+function postCat(cat,callback) {
+    collection.insertOne(cat,callback);
 }
 
-function getAllCats(callback) {
+function getAllCats(callback){
     collection.find({}).toArray(callback);
 }
 
-module.exports = {
-    insertCat,
-    getAllCats
-};
+module.exports = {postCat,getAllCats}

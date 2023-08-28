@@ -30,14 +30,14 @@ function postCat(cat){
         data:cat,
         success: (result)=>{
             if (result.statusCode === 201) {
-                alert('added');
+                alert('cat added');
             }
         }
     });
 }
 
 function getAllCats(){
-    $.get('/api/cats', (result) => {
+    $.get('/api/cat', (result) => {
         if (result.statusCode === 200) {
             addCards(result.data);
         }
