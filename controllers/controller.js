@@ -22,5 +22,18 @@ const getAllCats = (req,res) => {
     });
 }
 
-module.exports = {postCat, getAllCats}
+const deleteFromDB = (req, res) => {
+    let cat = req.body;
+    collection.deleteCats(cat, (err, result) => {
+        if (!err) {
+            res.json({
+                statusCode: 202,
+                data: result,
+                message: 'Deleted...!'
+            });
 
+        }
+    });
+}
+
+module.exports = {postCat, getAllCats, deleteFromDB}

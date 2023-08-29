@@ -10,4 +10,9 @@ function getAllCats(callback){
     collection.find({}).toArray(callback);
 }
 
-module.exports = {postCat,getAllCats}
+function deleteCats(cat,callback) {
+    collection.deleteOne(cat, callback);
+}   
+
+
+module.exports = {postCat,getAllCats, deleteCats}

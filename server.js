@@ -17,6 +17,7 @@ app.listen(port, ()=>{
     //runDB();
 });
 
+
 // app.get('/', function (req,res) {
 //     res.render('index.html');
 // });
@@ -39,6 +40,7 @@ app.listen(port, ()=>{
     //     }
     // });
 // });
+
 
 // const client = new MongoClient(uri, {
 //     serverApi: {
